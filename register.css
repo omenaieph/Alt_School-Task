@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+:root{
+    --main-color: #5F7161;
+    --second-color: #F2FA5A;
+}
+
+
+
+body{
+    background-color: var(--main-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+    background: #fff;
+    box-shadow: 0 1 4px rgba(146, 161, 176, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.logo{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+ul{
+    display: flex;
+}
+
+ul li a{
+    padding: 10px 22px;
+    color: var(--main-color);
+    border-radius: 2px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+ul li a:hover{
+    background: var(--second-color);
+    color: #fff;
+    border: none;
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin-top: 7%;
+}
+
+.container .title{
+    font-size: 1.4rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.container .title::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    left: 0;
+    bottom: 0;
+    background: var(--second-color);
+}
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+
+.user-details .input-box .details{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 14px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: var(--main-color);
+}
+
+form .button{
+    height: 45px;
+    margin: 30px 0;
+}
+
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+form .button input:hover{
+    background: #7882A4;
+}
+
+
+@media (max-width: 584px) {
+    .container{
+        max-width:100%;
+    }
+
+    form .user-details .input-box{
+        width: calc(100% / 2 - 20px);
+        margin-bottom: 15px;
+    }
+}

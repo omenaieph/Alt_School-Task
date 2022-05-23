@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --main-color: #5F7161;
+    --second-color: #F2FA5A;
+}
+
+
+section{
+    padding:100px;
+}
+
+#home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-text{
+    max-width: 500px;
+    
+}
+
+.home-text span{
+    color: var(--second-color);
+}
+
+.home-text h1 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    line-height: 3.5rem;
+}
+
+.home-image {
+    width: 500px;
+    height: 500px;
+}
+
+
+.home-image img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+    background: #fff;
+    box-shadow: 0 1 4px rgba(146, 161, 176, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.logo{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+ul{
+    display: flex;
+}
+
+ul li a{
+    padding: 10px 22px;
+    color: var(--main-color);
+    border-radius: 2px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+ul li a:hover{
+    background: var(--second-color);
+    color: #fff;
+    border: none;
+}
+
+
+.home-text a{
+    padding: 12px 34px;
+    background: var(--second-color);
+    color:#fff;
+    border-radius: 10px;
+}
+
+.home-text a:hover{
+    background: var(--main-color);
+    box-shadow: 0 10px 34px rgba(0,0,0, 0.14);
+}
+
+.social{
+    position: absolute;
+    display: flex;
+    bottom: 8%;
+    left: 144px;
+}
+
+.social i{
+    margin-right: 25px;
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.social i:hover{
+    color: var(--second-color);
+}
+
+
+/* About Me Heading */
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.heading h2 {
+    color: var(--main-color);
+    border-bottom: 4px solid var(--second-color);
+    font-size: 1.8rem;
+}
+
+
+.heading p {
+    color: var(--main-color);
+    margin-top: 0.5rem;
+}
+
+
+.about-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-image{
+    width: 320px;
+    height: 500px;
+}
+
+.about-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position:center;
+}
+
+.about-text{
+    width: 500px;
+    justify-content: center;
+}
+
+.about-text h1{
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.about-text p{
+    font-size: 1.1rem;
+    margin: 5px 0 24px;
+    text-align: justify;
+    color: var(--main-color);
+    line-height: 1.5rem;
+}
+
+.edu-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.edu-content .box{ 
+padding: 40px 20px;
+background: var(--main-color);
+color: #fff;
+max-width: 320px;
+margin: 16px;
+text-align: center;
+}
+
+.box img{
+    height: 40px;
+}
+
+.box h1{
+    font-size: 2rem;
+}
+
+.box h3{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.edu-content .box:hover{
+    transform: translateY(-10px);
+    background: var(--second-color);
+    transition: 0.5s;
+}
+
+/* Contact Form */
+
+#contact{
+    background: var(--main-color);
+}
+
+.heading.color h2{
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    font-size: 1.8rem;
+}
+
+.color p{
+    color: #fff;
+}
+
+.contact-content{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.contact-form{
+    width: 360px;
+    margin-top: 4rem;
+}
+
+.contact-form form input,
+.contact-form form textarea{
+    width: 100%;
+    font-size: 13px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+.contact-form form input::placeholder,
+.contact-form form textarea::placeholder{
+    color: var(--main-color);
+    letter-spacing: 1px;
+}
+
+.contact-form form textarea{
+    resize: none;
+    height: 200px;
+}
+
+.contact-form form select{
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 13px;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    margin-top: 4px;
+}
+
+.contact-button{
+    max-width:100px;
+    font-weight: bold;
+    background-color: var(--second-color);
+    color: #fff;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.contact-button:hover{
+    background-color: #7882A4;
+}
+
+.app{
+    max-width: 360px;
+}
+
+.app h1{
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 5px 0 24px;
+}
+
+.app i{
+    color: var(--second-color);
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.app i:hover{
+    color: #fff;
+    font-size: 30px;
+}
+
+
+.copyright{
+    padding: 20px;
+    background: var(--main-color);
+    color:#fff;
+    text-align: center;
+}
+
+
+/* Login Form */
+
+

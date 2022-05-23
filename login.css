@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+:root{
+    --main-color: #5F7161;
+    --second-color: #F2FA5A;
+}
+
+
+
+body{
+    background-color: var(--main-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+    background: #fff;
+    box-shadow: 0 1 4px rgba(146, 161, 176, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.logo{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+ul{
+    display: flex;
+}
+
+ul li a{
+    padding: 10px 22px;
+    color: var(--main-color);
+    border-radius: 2px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+ul li a:hover{
+    background: var(--second-color);
+    color: #fff;
+    border: none;
+}
+
+.container-login{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.container-login .form{
+    padding: 30px;
+}
+
+
+.container-login .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.form .title::before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: var(--second-color);
+    border-radius: 25px;
+}
+
+.form .input-field{
+    margin-top: 30px;
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    border-bottom:2px solid #ccc;
+    border-top:2px solid transparent;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #F2FA5A;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform:translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i {
+    color: #F2FA5A;
+}
+
+.form .checkbox-test{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+.checkbox-test .checkbox-content{
+    display: flex;
+    align-items:center;
+}
+
+.checkbox-content {
+    margin: 0 8px -2px 4px;
+    accent-color: var(--second-color);
+}
+
+.form a{
+    text-decoration: none;
+}
+
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;;
+}
+
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    background-color:var(--main-color);
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background-color: #7882A4;
+}
+
+.form .login-signup{
+    margin-top: 20px;
+    text-align: center;
+}
